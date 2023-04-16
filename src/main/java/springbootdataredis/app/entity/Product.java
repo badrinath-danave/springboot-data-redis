@@ -1,5 +1,7 @@
 package springbootdataredis.app.entity;
 
+import java.io.Serializable;
+
 import org.springframework.data.annotation.Id;
 import org.springframework.data.redis.core.RedisHash;
 
@@ -11,7 +13,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @RedisHash("Product")
-public class Product {
+public class Product implements Serializable{
 
 	@Id
 	private int id;
